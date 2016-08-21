@@ -1,6 +1,6 @@
 ﻿Configuration SimplePSWA {
 
-    Import-DSCResource -ModuleName xWebAdministration, PSDesiredStateConfiguration, dPSWA
+    Import-DSCResource -ModuleName xWebAdministration, PSDesiredStateConfiguration
     
     WindowsFeatureSet PowerShellWebAccess {
         Name   = 'WindowsPowerShellWebAccess','Web-Mgmt-Console'
@@ -23,7 +23,7 @@
     }
 
     PswaWebApplication PSWA2 {
-        Ensure = 'Present'
+        Ensure = 'Absent'
         WebApplicationName = 'pswa2'
         WebSiteName = 'PoSHWeb'
     }

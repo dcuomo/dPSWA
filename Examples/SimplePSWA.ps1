@@ -2,7 +2,7 @@
     Import-DscResource -ModuleName dPSWA
 
     PswaWebApplication PSWA2 {
-        Ensure = 'Present'
+        Ensure = 'Absent'
         WebApplicationName = 'pswa2'
         WebSiteName = 'PoSHWeb'
     }
